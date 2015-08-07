@@ -1,7 +1,7 @@
 $(function() {
 
 	var app_id = '1682310898660786';
-	var scopes = 'email, user_friends';
+	var scopes = 'email, user_friends, user_online_presence';
 
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
