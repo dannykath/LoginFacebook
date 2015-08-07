@@ -14,11 +14,11 @@ $(function() {
 	window.fbAsyncInit = function() {
 
 	  	FB.init({
-	    	appId      : app_id,
+	    	appId      : '386184524909608',
 	    	status     : true,
 	    	cookie     : true, 
 	    	xfbml      : true, 
-	    	version    : 'v2.1'
+	    	version    : 'v2.4'
 	  	});
 
 
@@ -86,7 +86,7 @@ $(function() {
   	$(document).on('click', '#logout', function(e) {
   		e.preventDefault();
 
-  		if (confirm("¿Está seguro?"))
+  		if (confirm("¿Está seguro que desea salir?"))
   			facebookLogout();
   		else 
   			return false;
