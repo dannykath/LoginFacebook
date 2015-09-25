@@ -1,7 +1,7 @@
 $(function() {
 
 	var app_id = '1682310898660786';
-	var scopes = 'email, user_friends';
+	var scopes = 'email, user_friends,publish_actions,public_profile,user_photos,user_location,user_tagged_places,user_post';
 
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
@@ -48,6 +48,7 @@ $(function() {
 	  		$('#login').after(div_session);
 	  		$('#login').remove();
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
+	  		$('#facebook-session strong').text("Tu id de cuenta es : "+response.id);
 	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 	  	});
   	}
@@ -74,22 +75,7 @@ $(function() {
   		})
 
   	}
-function getAlbumPhotos(){
-            FB.api('/me/albums',  function(resp) {
-                //Log.info('Albums', resp);
-                var ul = document.getElementById('albums');
-                for (var i=0, l=resp.data.length; i<l; i++){
-                    var
-                        album = resp.data[i],
-                        li = document.createElement('li'),
-                        a = document.createElement('a');
-                    a.innerHTML = album.name;
-                    a.href = album.link;
-                    li.appendChild(a);
-                    ul.appendChild(li);
-                }
-            });
-        };
+
 
 
   	$(document).on('click', '#login', function(e) {
