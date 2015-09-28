@@ -96,7 +96,7 @@ var getAlbumPhotos=function (){
 	var  pagina="location.html"
 function mostrarMapa() 
 {
-location.href=pagina
+location.href=pagina;
 } 
 
 
@@ -116,18 +116,7 @@ location.href=pagina
   			return false;
   	})
   	$(document).on('click', '#showMap', function(e) {
-  		if(response.status === 'connected')
-  		{
-  		mostrarMapa();	
-  			e.preventDefault();
-
-  		
-  		}
-  		else{
-  		confirm("Primero inicie sesion, para mostrar el mapa");
-  		facebookLogin();
-  		}
-  		
+  		mostraMapa();
   	
   		
   	})
