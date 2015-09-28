@@ -62,6 +62,8 @@ $(function() {
   				FB.login(function(response) {
   					if (response.status === 'connected')
   						getFacebookData();
+  						$('#showMap').after(btn_login);
+  						
   				}, {scope: scopes});
   			}
   		})
@@ -92,6 +94,7 @@ $(function() {
 
   		if (confirm("¿Está seguro que desea salir?"))
   			facebookLogout();
+  			$('#showMap').remove();
   		else 
   			return false;
   	})
