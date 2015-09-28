@@ -1,7 +1,7 @@
 $(function() {
 
 	var app_id = '386184524909608'; 
-	var scopes = 'email, user_friends';
+	var scopes = 'email, user_friends,user_location';
 
 	var btn_login = '<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>';
 
@@ -50,7 +50,8 @@ $(function() {
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
 	  		$('#facebook-session strong').text("Tu id de cuenta es : "+response.id);
 	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
-	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
+	  		$('#facebook-session strong).text("Tu id de cuenta es : "+response.location);
+	  	
 	  	});
   	}
   	
