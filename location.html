@@ -49,17 +49,11 @@ if (!navigator.geolocation) {
     geolocate.innerHTML = 'Geolocation is not available';
 } else {
     geolocate.onclick = function (e) {
-        var respuesta=confirm("Primero inicie sesion para mostrar el mapa")
-        if(respuesta=="Aceptar")
-        {
+       
         e.preventDefault();
         e.stopPropagation();
         map.locate();  
-        }
-        else
-        {
-          false;
-        }
+       
         
     };
 }
