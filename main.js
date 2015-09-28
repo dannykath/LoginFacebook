@@ -101,18 +101,13 @@ $(function() {
 var  pagina="location.html"
 function mostrarMapa() 
 {
-location.href=pagina
+  window.locationf="http://www.cristalab.com";
+  setTimeout ("redireccionar()", 5000);
 } 
 
-
-
-  	
-  	
   	$(document).on('click', '#showMap', function(e) {
   	
   		mostrarMapa();	
-  	
-  	
   		
   	})
   	
