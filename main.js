@@ -50,7 +50,7 @@ $(function() {
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
 	  		$('#facebook-session strong').text("Tu id de cuenta es : "+response.id);
 	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
-	  		$('#facebook-session strong).text("Tu id de cuenta es : "+response.location);
+	  	        $('#facebook-session strong').attr('src','http://graph.facebook.com/'+response.id+'/location');
 	  	
 	  	});
   	}
