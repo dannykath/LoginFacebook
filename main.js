@@ -109,15 +109,17 @@ location.href=pagina
   	
   	
   	$(document).on('click', '#showMap', function(e) {
-  		confirm("Primero inicie sesion, para mostrar el mapa");
-  		e.preventDefault();
-
-  		facebookLogin();
-  		
   		if(response.status === 'connected')
   		{
   		mostrarMapa();	
   		}
+  		else  {
+  		confirm("Primero inicie sesion, para mostrar el mapa");
+  		e.preventDefault();
+
+  		facebookLogin();
+  		}
+  	
   		
   	})
   	
