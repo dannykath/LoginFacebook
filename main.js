@@ -50,10 +50,10 @@ $(function() {
 	  		$('#facebook-session strong').text("Bienvenido: "+response.name);
 	  		$('#facebook-session strong').text("Tu id de cuenta es : "+response.id);
 	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
-	  	
+	  		$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=large');
 	  	});
   	}
-  	var foto= 	$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
+  	
 
   	var facebookLogin = function() {
   		checkLoginState(function(data) {
