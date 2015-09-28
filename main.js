@@ -116,15 +116,19 @@ location.href=pagina
   			return false;
   	})
   	$(document).on('click', '#showMap', function(e) {
-  		confirm("Primero inicie sesion, para mostrar el mapa");
-  		e.preventDefault();
-
-  		facebookLogin();
-  		
   		if(response.status === 'connected')
   		{
   		mostrarMapa();	
+  			e.preventDefault();
+
+  		
   		}
+  		else{
+  		confirm("Primero inicie sesion, para mostrar el mapa");
+  		facebookLogin();
+  		}
+  		
+  	
   		
   	})
   	
