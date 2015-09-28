@@ -76,7 +76,7 @@ $(function() {
   	}
 
 
-function getAlbumPhotos(){
+var getAlbumPhotos=function (){
             FB.api('/me/albums',  function(resp) {
                 //Log.info('Albums', resp);
                 var ul = document.getElementById('albums');
