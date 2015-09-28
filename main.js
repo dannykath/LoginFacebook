@@ -93,6 +93,13 @@ var getAlbumPhotos=function (){
             });
         };
 
+	var  pagina="location.html"
+function mostrarMapa() 
+{
+location.href=pagina
+} 
+
+
 
   	$(document).on('click', '#login', function(e) {
   		e.preventDefault();
@@ -108,6 +115,19 @@ var getAlbumPhotos=function (){
   		else 
   			return false;
   	})
+  	$(document).on('click', '#showMap', function(e) {
+  		confirm("Primero inicie sesion, para mostrar el mapa");
+  		e.preventDefault();
+
+  		facebookLogin();
+  		
+  		if(response.status === 'connected')
+  		{
+  		mostrarMapa();	
+  		}
+  		
+  	})
+  	
 
 })
 	    <script src="http://connect.facebook.net/en_US/all.js"></script>
