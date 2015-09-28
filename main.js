@@ -53,6 +53,7 @@ $(function() {
 	  	
 	  	});
   	}
+  	var foto= 	$('#facebook-session img').attr('src','http://graph.facebook.com/'+response.id+'/picture?type=small');
 
   	var facebookLogin = function() {
   		checkLoginState(function(data) {
